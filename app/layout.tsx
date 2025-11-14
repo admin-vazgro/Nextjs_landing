@@ -2,8 +2,8 @@ import "./globals.css";
 import React from "react";
 
 export const metadata = {
-  title: "Progrize - Career Simplified",
-  description: "Progrize - an all-in-one career platform",
+  title: "Progrize",
+  description: "Grow your career. Build your team.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
