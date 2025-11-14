@@ -50,7 +50,7 @@ export default function Page() {
                 <a href="./" className="inline-flex mr-4 items-center gap-2 px-5 py-3 bg-primary text-sm text-white rounded-md font-semibold hover:opacity-95">
                   BACK TO HOME
                 </a>
-                <a href=".mailto:progrize.app@gmail.com" className="inline-flex mt-4 md:ml-4 items-center gap-2 px-5 py-3 border border-gray-200 text-sm rounded-md hover:bg-gray-50">
+                <a href="mailto:progrize.app@gmail.com" className="inline-flex mt-4 md:ml-4 items-center gap-2 px-5 py-3 border border-gray-200 text-sm rounded-md hover:bg-gray-50">
                   EMAIL TO US
                 </a>
               </div>

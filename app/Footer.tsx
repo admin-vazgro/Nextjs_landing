@@ -3,6 +3,7 @@ import instagram from "../public/Social/Instagram.svg"
 import linkedin from "../public/Social/LinkedIn.svg"
 import facebook from "../public/Social/Facebook.svg"
 import twitter from "../public/Social/Twitter.svg"
+import white from "../public/whitelogo.svg"
 import Image from 'next/image'
 
 export default function Footer() {
@@ -32,7 +33,7 @@ export default function Footer() {
 
         {/* LEFT BRAND SECTION */}
         <div>
-          <h3 className="text-xl font-light mb-3">Progrize↗</h3>
+          <Image  alt="logo" className="mb-4" width={100} height={100} src={white}></Image>
           <p className="text-gray-300 text-sm font-light">A product by Vazgro</p>
 
           {/* Social Icons */}

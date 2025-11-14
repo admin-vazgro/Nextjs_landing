@@ -20,11 +20,11 @@ export default function CommunitySection() {
           # Our Community
         </p>
 
-        <h2 className="text-3xl md:text-5xl font-regular tracking-tighter text-gray-900 leading-tight">
+        <h2 className="text-3xl text-left md:text-5xl font-regular tracking-tighter text-gray-900 leading-tight">
           A Professional Community Built for Growth
         </h2>
 
-        <p className="mt-4 text-gray-600  font-light ">
+        <p className="mt-4 text-gray-600  text-left  font-light ">
           Connect, collaborate, and grow with peers, mentors, recruiters, and alumni.
           From events to mentorships, the Progrize Community is where careers progress together.
         </p>
