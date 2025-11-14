@@ -1,64 +1,100 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import Image from 'next/image'
+import Proboy from '../public/proboy.webp'
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import School from "./School";
+import Tabs from "./Tabs";
+import CommunitySection from "./Features"
+import Growwithus from "./Growwithus";
+import TestimonialSection from "./Testimonial";
+import FAQSection from "./Faq";
+import JoinUsSection from "./Joinwithus";
+import Footer from "./Footer";
+
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 18 },
+  show: { opacity: 1, y: 0 },
+};
+const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.08 } } };
+
+export default function Page() {
+  // single email state reused for forms (simple UX: same field reused)
+  const [email, setEmail] = useState("");
+  const [collected, setCollected] = useState<string[]>([]);
+  const [faqOpen, setFaqOpen] = useState<Record<number, boolean>>({});
+  const [testimonialIndex, setTestimonialIndex] = useState(0);
+
+  const features = [
+    { title: "AI-Optimised CVs", note: "Beat ATS filters with AI + expert review." },
+    { title: "Build a Standout Profile", note: "Showcase skills, projects & achievements." },
+    { title: "Mentorship", note: "Learn from industry mentors." },
+    { title: "Communities", note: "Connect, share and grow together." },
+    { title: "Job Referrals", note: "Get referred to top companies." },
+    { title: "Job Tracking", note: "Smart application tracking." },
+  ];
+
+  const testimonials = [
+    { name: "Sarah Khan", title: "@ GRE student", text: "These platforms will be a real helping hand for tailoring CVs and job preparation. Really looking forward to it." },
+    { name: "John Stene", title: "@ GRE student", text: "The projects directly matched job tasks. Great hands-on learning." },
+    { name: "Asha", title: "@ Student", text: "Landed an interview in 3 months thanks to the structured curriculum." },
+    { name: "Mentorship", title: "@ Mentee", text: "Mentors helped me prepare for interviews and feedback was actionable." },
+  ];
+
+  const faqs = [
+    { q: "What is Progrize?", a: "An all-in-one career platform for professionals and organisations." },
+    { q: "How do job seekers use it?", a: "Build a profile, apply for jobs, get mentorship and referrals." },
+    { q: "How do organisations use it?", a: "Create a company profile, post jobs and access hiring insights." },
+    { q: "Is there a free plan?", a: "Yes. Premium tools are coming soon. First 2 months are free for all." },
+  ];
+
+  function handleSubmit(e: React.FormEvent, source = "unknown") {
+    e.preventDefault();
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+    console.log(`[Progrize] Collected from ${source}:`, email);
+    setCollected((s) => [...s, email]);
+    setEmail("");
+  }
+
+  function toggleFaq(i: number) {
+    setFaqOpen((prev) => ({ ...prev, [i]: !prev[i] }));
+  }
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="min-h-screen">
+      {/* NAV */}
+      <Navbar/>
+     
+      <main className="container py-12">
+        {/* HERO */}
+       <Hero/>
+
+     {/* School */}
+     <School/>
+        {/* School */}
+        <Tabs/>
+        <CommunitySection/>
+
+        <Growwithus/>
+        <TestimonialSection/>
+        <FAQSection/>
+        <JoinUsSection/>
+
+
+
+
+        {/* JOIN THE BETA */}
+     
+
+        {/* Footer */}
+       <Footer/>
       </main>
     </div>
   );
