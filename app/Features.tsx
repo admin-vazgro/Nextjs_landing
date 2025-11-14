@@ -6,7 +6,7 @@ import screen from "../public/screen.svg";
 
 export default function CommunitySection() {
   return (
-    <section className="relative w-full py-24 md:py-36 ">
+    <section id="features" className="relative w-full py-24 md:py-36 ">
 
       {/* TEXT HEADER */}
       <motion.div

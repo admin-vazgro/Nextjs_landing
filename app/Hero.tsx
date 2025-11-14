@@ -77,10 +77,10 @@ export default function Navbar() {
 
                     <motion.div variants={fadeUp} className="mt-8 flex flex-col sm:flex-row gap-4 item-center ">
                         <div>
-                            <a href="#school" className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-sm text-white rounded-md font-semibold hover:opacity-95">
+                            <a href="./upcoming" className="inline-flex items-center gap-2 px-5 py-3 bg-primary text-sm text-white rounded-md font-semibold hover:opacity-95">
                                 PROGRIZE SCHOOL
                             </a>
-                            <a href="#app" className="inline-flex mt-4 md:ml-4 items-center gap-2 px-5 py-3 border border-gray-200 text-sm rounded-md hover:bg-gray-50">
+                            <a href="./upcoming" className="inline-flex mt-4 md:ml-4 items-center gap-2 px-5 py-3 border border-gray-200 text-sm rounded-md hover:bg-gray-50">
                                 PROGRIZE APP <span className="text-sm">Upcoming</span>
                             </a>
                         </div>
@@ -88,7 +88,7 @@ export default function Navbar() {
                 </div>
 
                 {/* RIGHT COLUMN — UPDATED FORM */}
-                <motion.div variants={fadeUp} className="mt-8 pt-6 px-6 rounded-xl border border-gray-300">
+                <motion.div variants={fadeUp} id='curiosity' className="mt-8 pt-6 px-6 rounded-xl border  border-gray-300">
                     <div className="flex items-center justify-between">
                         <div>
                             <div className="mt-1 text-xl md:text-3xl tracking-tight font-regular">Join the curiosity</div>

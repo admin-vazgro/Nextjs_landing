@@ -32,7 +32,7 @@ export default function JoinUsSection() {
                 </p>
 
                 {/* BUTTON */}
-                <button className="
+                <a href="#curiosity" className="
           bg-[#162f16] 
           text-white 
           px-10 
@@ -40,16 +40,16 @@ export default function JoinUsSection() {
          rounded-md
           text-sm 
           font-regular 
-          flex 
-          items-center 
+         
           gap-2 
           mx-auto
           hover:bg-[#0f2310]
           transition
+          max-w-4xl
         ">
-                    JOIN WITH US
+                    JOIN THE CURIOSITY
 
-                </button>
+                </a>
 
             </div>
         </section>

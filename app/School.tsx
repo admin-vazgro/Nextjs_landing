@@ -43,7 +43,7 @@ export default function School() {
 
                     <motion.div variants={fadeUp} className="mt-8 flex flex-col sm:flex-row gap-4 item-center ">
                         <div>
-                            <a href="#school" className="inline-flex items-center gap-2 px-5 item  py-3 bg-primary font-regular text-sm text-white rounded-md font-semibold hover:opacity-95">PROGRIZE SCHOOL</a>
+                            <a href="./upcoming" className="inline-flex items-center gap-2 px-5 item  py-3 bg-primary font-regular text-sm text-white rounded-md font-semibold hover:opacity-95">PROGRIZE SCHOOL</a>
                         </div>
                     </motion.div>
                 </div>

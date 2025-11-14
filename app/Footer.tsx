@@ -1,21 +1,26 @@
 "use client";
+import instagram from "../public/Social/Instagram.svg"
+import linkedin from "../public/Social/LinkedIn.svg"
+import facebook from "../public/Social/Facebook.svg"
+import twitter from "../public/Social/Twitter.svg"
+import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0c331f] text-white pt-20 pb-10 rounded-t-[40px] mt-32">
+    <footer className="bg-[#0c331f] text-white pt-4 pb-10 rounded-t-[40px] mx-2 mt-32">
       {/* TOP MARQUEE TEXT */}
 
-      <div className="overflow-hidden text-[70px] md:text-[110px] font-medium tracking-tight border-b border-white/10 pb-8">
+      <div className="overflow-hidden text-[70px] text-lime-300 font-medium tracking-tight border-b border-white/10 pb-8">
   <div className="marquee">
     <div className="marquee__inner">
       <span>* Progrize</span>
-      <span>* Progrise</span>
+      <span>* Career</span>
       <span>* Rise</span>
       <span>* Jobs</span>
 
       {/* Duplicate for seamless loop */}
       <span>* Progrize</span>
-      <span>* Progrise</span>
+      <span>* Career</span>
       <span>* Rise</span>
       <span>* Jobs</span>
     </div>
@@ -32,10 +37,11 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-6 text-lg">
-            <a href="#" className="hover:text-gray-300 transition">🐦</a>
-            <a href="#" className="hover:text-gray-300 transition">📸</a>
-            <a href="#" className="hover:text-gray-300 transition">💼</a>
-            <a href="#" className="hover:text-gray-300 transition">▶️</a>
+            <a href="https://www.linkedin.com/company/progrize-global" className="hover:text-gray-300 transition">
+              <Image src={linkedin} alt="linkedIn"></Image></a>
+            <a href="./upcoming" className="hover:text-gray-300 transition"><Image src={facebook} alt="facebook"></Image></a>
+      
+            <a href="https://www.instagram.com/progrize.global?igsh=MW91a2ppdGFxN3N5" className="hover:text-gray-300 transition"><Image src={instagram} alt="instagram"></Image></a>
           </div>
         </div>
 
@@ -43,11 +49,11 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-medium mb-5">Company</h4>
           <ul className="space-y-3 text-gray-300 text-sm">
-            <li><a href="#" className="hover:text-white transition">About</a></li>
-            <li><a href="#" className="hover:text-white transition">Contact us</a></li>
-            <li><a href="#" className="hover:text-white transition">Careers</a></li>
-            <li><a href="#" className="hover:text-white transition">Culture</a></li>
-            <li><a href="#" className="hover:text-white transition">Blog</a></li>
+            <li><a href="./upcoming" className="hover:text-white transition">About</a></li>
+            <li><a href="./upcoming" className="hover:text-white transition">Contact us</a></li>
+            <li><a href="./upcoming" className="hover:text-white transition">Careers</a></li>
+            <li><a href="./upcoming" className="hover:text-white transition">Culture</a></li>
+            <li><a href="./upcoming" className="hover:text-white transition">Blog</a></li>
           </ul>
         </div>
 
@@ -55,11 +61,11 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-medium mb-5">Support</h4>
           <ul className="space-y-3 text-gray-300 text-sm">
-            <li><a href="#" className="hover:text-white transition">Getting started</a></li>
-            <li><a href="#" className="hover:text-white transition">Help center</a></li>
-            <li><a href="#" className="hover:text-white transition">Server status</a></li>
-            <li><a href="#" className="hover:text-white transition">Report a bug</a></li>
-            <li><a href="#" className="hover:text-white transition">Chat support</a></li>
+            <li><a href="./upcoming" className="hover:text-white transition">Getting started</a></li>
+            <li><a href="./upcoming" className="hover:text-white transition">Help center</a></li>
+            <li><a href="./upcoming" className="hover:text-white transition">Server status</a></li>
+            <li><a href="./upcoming" className="hover:text-white transition">Report a bug</a></li>
+            <li><a href="./upcoming" className="hover:text-white transition">Chat support</a></li>
           </ul>
         </div>
 
@@ -79,8 +85,8 @@ export default function Footer() {
       {/* BOTTOM LINE */}
       <div className="border-t border-white/20 mt-12 pt-6 text-center text-gray-300 text-sm">
         Copyright © 2024 | 
-        <a href="#" className="ml-2 hover:text-white">Terms and Conditions</a> | 
-        <a href="#" className="ml-2 hover:text-white">Privacy Policy</a>
+        <a href="./upcoming" className="ml-2 hover:text-white">Terms and Conditions</a> | 
+        <a href="./upcoming" className="ml-2 hover:text-white">Privacy Policy</a>
       </div>
     </footer>
   );

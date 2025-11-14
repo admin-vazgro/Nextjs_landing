@@ -93,9 +93,10 @@ export default function Page() {
         {/* JOIN THE BETA */}
      
 
-        {/* Footer */}
-       <Footer/>
+        
       </main>
+      {/* Footer */}
+       <Footer/>
     </div>
   );
 }

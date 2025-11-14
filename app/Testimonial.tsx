@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function TestimonialSection() {
   return (
-    <section className="w-full py-24 bg-white">
+    <section id="testimonials" className="w-full py-24 bg-white">
       <div className="max-w-5xl mx-auto px-6">
 
         {/* HEADER */}
