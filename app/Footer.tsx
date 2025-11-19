@@ -74,10 +74,10 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-medium mb-5">Contacts us</h4>
           <ul className="space-y-4 text-gray-300 text-sm">
-            <li className="flex items-center gap-2">📧 contact@company.com</li>
-            <li className="flex items-center gap-2">📞 (414) 687 - 5892</li>
+            <li className="flex items-center gap-2">📧 Hello@progrize.com</li>
+            <li className="flex items-center gap-2">📞 (+44)7717 820439</li>
             <li className="flex items-start gap-2">
-              📍 794 Mcallister St <br /> San Francisco, 94102
+              📍 Innovation Centre, Knowledge Gateway, Boundary Road, Colchester<br /> England, CO4 3ZQ
             </li>
           </ul>
         </div>
