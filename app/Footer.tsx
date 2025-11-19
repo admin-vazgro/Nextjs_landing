@@ -85,7 +85,7 @@ export default function Footer() {
 
       {/* BOTTOM LINE */}
       <div className="border-t border-white/20 mt-12 pt-6 text-center text-gray-300 text-sm">
-        Copyright © 2024 | 
+        Copyright © 2025 | 
         <a href="./upcoming" className="ml-2 hover:text-white">Terms and Conditions</a> | 
         <a href="./upcoming" className="ml-2 hover:text-white">Privacy Policy</a>
       </div>
